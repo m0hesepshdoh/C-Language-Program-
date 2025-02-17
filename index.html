@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Internet Coffee Shop</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div class="container">
+    <h1>Welcome to Internet Coffee</h1>
+    <p class="subtitle">Fresh Drinks & Delicious Cakes</p>
+    <div class="menu-section">
+      <h2>Hot Drinks Menu</h2>
+      <div class="menu-items">
+        <div class="item">
+          <label>Coffee (15 THB)</label>
+          <button class="minus-btn" onclick="decrementValue('coffee')">-</button>
+          <input type="number" id="coffee" min="0" value="0" readonly>
+          <button class="plus-btn" onclick="incrementValue('coffee')">+</button>
+        </div>
+        <div class="item">
+          <label>Tea (10 THB)</label>
+          <button class="minus-btn" onclick="decrementValue('tea')">-</button>
+          <input type="number" id="tea" min="0" value="0" readonly>
+          <button class="plus-btn" onclick="incrementValue('tea')">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="menu-section">
+      <h2>Juice Menu</h2>
+      <div class="menu-items">
+        <div class="item">
+          <label>Apple Juice (10 THB)</label>
+          <button class="minus-btn" onclick="decrementValue('appleJuice')">-</button>
+          <input type="number" id="appleJuice" min="0" value="0" readonly>
+          <button class="plus-btn" onclick="incrementValue('appleJuice')">+</button>
+        </div>
+        <div class="item">
+          <label>Orange Juice (12 THB)</label>
+          <button class="minus-btn" onclick="decrementValue('orangeJuice')">-</button>
+          <input type="number" id="orangeJuice" min="0" value="0" readonly>
+          <button class="plus-btn" onclick="incrementValue('orangeJuice')">+</button>
+        </div>
+        <div class="item">
+          <label>Banana Juice (15 THB)</label>
+          <button class="minus-btn" onclick="decrementValue('bananaJuice')">-</button>
+          <input type="number" id="bananaJuice" min="0" value="0" readonly>
+          <button class="plus-btn" onclick="incrementValue('bananaJuice')">+</button>
+        </div>
+        <div class="item">
+          <label>Grape Juice (10 THB)</label>
+          <button class="minus-btn" onclick="decrementValue('grapeJuice')">-</button>
+          <input type="number" id="grapeJuice" min="0" value="0" readonly>
+          <button class="plus-btn" onclick="incrementValue('grapeJuice')">+</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="menu-section">
+      <h2>Food Menu</h2>
+      <div class="menu-items">
+        <div class="item">
+          <div class="item-text">
+            <label>Strawberry Cake (20 THB)</label>
+            <span id="strawberryStock">(100 left)</span>
+          </div>
+          <div class="item-controls">
+            <button class="minus-btn" onclick="decrementValue('strawberryCake')">-</button>
+            <input type="number" id="strawberryCake" min="0" value="0" readonly>
+            <button class="plus-btn" onclick="incrementValue('strawberryCake')">+</button>
+          </div>
+        </div>
+        <div class="item">
+          <div class="item-text">
+            <label>Chocolate Cake (20 THB)</label>
+            <span id="chocolateStock">(100 left)</span>
+          </div>
+          <div class="item-controls">
+            <button class="minus-btn" onclick="decrementValue('chocolateCake')">-</button>
+            <input type="number" id="chocolateCake" min="0" value="0" readonly>
+            <button class="plus-btn" onclick="incrementValue('chocolateCake')">+</button>
+          </div>
+        </div>
+        <div class="item">
+          <div class="item-text">
+            <label>Pineapple Cake (25 THB)</label>
+            <span id="pineappleStock">(100 left)</span>
+          </div>
+          <div class="item-controls">
+            <button class="minus-btn" onclick="decrementValue('pineappleCake')">-</button>
+            <input type="number" id="pineappleCake" min="0" value="0" readonly>
+            <button class="plus-btn" onclick="incrementValue('pineappleCake')">+</button>
+          </div>
+        </div>
+        <div class="item">
+          <div class="item-text">
+            <label>Vanilla Cake (22 THB)</label>
+            <span id="vanillaStock">(100 left)</span>
+          </div>
+          <div class="item-controls">
+            <button class="minus-btn" onclick="decrementValue('vanillaCake')">-</button>
+            <input type="number" id="vanillaCake" min="0" value="0" readonly>
+            <button class="plus-btn" onclick="incrementValue('vanillaCake')">+</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="bill" class="bill-section">
+      <h2>Your Bill</h2>
+      <div id="billDetails"></div>
+      <div class="total">Total: <span id="totalAmount">0</span> THB</div>
+      <button id="newOrder">New Order</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
